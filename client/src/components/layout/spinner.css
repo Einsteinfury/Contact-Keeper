@@ -1,0 +1,36 @@
+.spinner {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  border-radius: 50%;
+}
+
+.circle::after, .circle::before {
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.circle::after {
+  background: rgb(244, 245, 252);
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  border: 7px solid transparent;
+  border-top-color: rgb(89, 165, 209);
+  animation: spin 1.5s linear infinite
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
